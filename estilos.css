@@ -1,0 +1,65 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	display: flex;
+	flex-flow: row wrap;
+}
+header, section, aside, footer, .widget{
+	background-color: #2f89fc;
+	padding: 20px;
+	box-shadow: 1px 2px 3px black/*,
+				inset 1px 2px 3px black*/;
+	margin: 5px 0px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+
+}
+header{
+	width: 100%;
+}
+section{
+	width: 50%;
+}
+aside{
+	width: 50%;
+}
+.widget{
+	width: 25%;
+}
+footer{
+	width: 100%;
+}
+
+@media screen and (max-width: 770px) { /*Tablet*/
+	.widget{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 450px) { /*Telefono*/
+	.container{
+		flex-flow: column wrap;
+	}
+	header, section, aside, footer, .widget{
+		background-color: orange;
+		color: white;
+		min-width: 200px;
+	}
+	.widget{
+		width: 100%;
+		background-color: purple;
+	}
+	section{
+		width: 100%;
+	}
+
+	aside{
+		width: 100%;
+	}
+	
+	
+}
